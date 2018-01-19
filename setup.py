@@ -1,0 +1,30 @@
+from setuptools import setup
+
+setup(name='PyXtremIO',
+      version='0.0.1.0',
+      url='https://github.com/chiragadm/PyXtremIO/',
+      author='Chirag Patel & Ported from PyU4V',
+      author_email='chiragadm@gmail.com',
+      description=("A library showing some of the functionality possible "
+                   "using the ReST API of Dell EMC's XtremIO XMS."),
+      license='MIT',
+      packages=['PyXtremIO','PyXtremIO.utils'],
+      install_requires=['requests', 'six', 'urllib3', 'pyyaml'],
+      include_package_data=True,
+      classifiers=[
+          'Development Status :: 3 - Alpha',
+          'Intended Audience :: Developers',
+          'Intended Audience :: System Administrators',
+          'Operating System :: OS Independent',
+          'Programming Language :: Python',
+          'Programming Language :: Python :: 2',
+          'Programming Language :: Python :: 2.7',
+          'Programming Language :: Python :: 3',
+          'Programming Language :: Python :: 3.4',
+          'Programming Language :: Python :: 3.5',
+          'Programming Language :: Python :: 3.6',
+          'Topic :: Internet :: WWW/HTTP',
+          'Topic :: Software Development :: Libraries :: Python Modules', ],
+      test_suite='pytest',
+      tests_require=['pytest'],
+      )
