@@ -4,7 +4,7 @@ import pprint
 
 username = "admin"
 password = "Xtrem10"
-hostname = "192.168.86.43"
+hostname = "192.168.146.128"
 port = "443"
 xioapi_version = "v2"
 cluster_name = "xbrick615"
