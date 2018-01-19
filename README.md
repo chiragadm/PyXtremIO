@@ -24,8 +24,8 @@ PyXtremIO supports XMS 4.x and 6.0.X
     
   ```
 
-  # Setting up configuration file (fabview.cfg):
-  Once the program is installed in directory as per above instruction, now it is time to configure the settings file.
+  # Setting Up YAML File For Tracking Logging:
+  Once this library is installed, you will have an option to create yaml file that contains configuration settings to enable rotational logs. Upon appropriate setting in the yaml file, log files will retain any informational or error logs.
   You will need to put the core switches information as per following. (Core switches are the switches that are connected to all other switches in your fabric)
   
   For example, I have two fabrics in my environment. Each fabric has one core switch. 
