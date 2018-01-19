@@ -24,9 +24,9 @@ PyXtremIO supports XMS 4.x and 6.0.X
     
   ```
 
-  # Setting Up YAML File For Tracking Logging:
+  # Setting Up PyXtremIO.yaml File For Tracking Logging:
   Once this library is installed, you will have an option to create PyXtremIO.yaml file that contains configuration settings to enable rotational logs. Upon appropriate setting in the yaml file, log files will retain any informational or error logs.
-  Please find following example of yaml file.
+  Please find following example of PyXtremIO.yaml file.
   ```
   cat PyXtremIO.yaml
   ---
@@ -78,4 +78,18 @@ PyXtremIO supports XMS 4.x and 6.0.X
   PyXtremIO.yaml file in our working directory. At last if this file do not exists there, library will use default logging method. This default 
   method will not log your events.  
   
+# How To Use This Library?
+As of now, this library has close to 90+ methods you can call. However, I have listed most useful methods in "testing" directory. 
+Please find following file lists that demonstrate use of this hand few useful methods.
+```
+File List:
+01_allocation_storage_new_server.py
+02_add_new_storage_to_existing_ig.py
+03_add_existing_storage_new_server.py
+04_add_existing_storag_existing_server.py
+05_remove_volumes_from_server.py
+06_generate_snapshot.py
+07_remove_snapshot.py
+
+```
   
