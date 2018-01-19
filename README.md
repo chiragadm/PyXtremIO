@@ -77,6 +77,17 @@ PyXtremIO supports XMS 4.x and 6.0.X
   This environment variable should contains full path of your PyXtremIO.yaml file. If this environment variable is not set, library will check
   PyXtremIO.yaml file in our working directory. At last if this file do not exists there, library will use default logging method. This default 
   method will not log your events.  
+  * How To Setup Environment Variable?
+  Please use following procedure to setup environment variable on Unix based systems
+  ```
+  export PYXTREMIO_LOG_CFG="/directory/that/contains/file/PyXtremIO.yaml"
+
+  ```
+  Please use following procedure to setup environment variable on Windows systems
+  ```
+  set PYXTREMIO_LOG_CFG="\directory\that\contains\file\PyXtremIO.yaml"
+
+  ```
   
 # How To Use This Library?
 As of now, this library has close to 90+ methods you can call. However, I have listed most useful methods in "testing" directory. 
