@@ -13,7 +13,7 @@ PyXtremIO supports XMS 4.x and 6.0.X
   * Inventory Discovery
 
  
-* # How To Install This Library?
+# How To Install This Library?
   Please run following command to install this library. (You will need GIT CLI & pip3(or pip) installed on your server.)
   * $ cd SOME_DIRECTORY (Directory that you want to install this program)
   * $ git clone https://URL
@@ -78,13 +78,4 @@ PyXtremIO supports XMS 4.x and 6.0.X
   PyXtremIO.yaml file in our working directory. At last if this file do not exists there, library will use default logging method. This default 
   method will not log your events.  
   
-  With above example, my settings file (fabview.cfg) will look like below.
-  Setting file is located in etc directory under your install directory.
-  * $ cd SOME_DIRECTORY/etc
-  * $ cat fabview.cfg
-    ```
-    [Fabric_Config]
-    SWITCH: coreA,coreB
-    SW_USER:
-    SW_PASSWORD:
-    ```
+  
