@@ -15,8 +15,7 @@ PyXtremIO supports XMS 4.x and 6.0.X
  
 # How To Install This Library?
   Please run following command to install this library. (You will need GIT CLI & pip3(or pip) installed on your server.)
-  * $ cd SOME_DIRECTORY (Directory that you want to install this program)
-  * $ git clone https://URL
+
   ```
   cd /AnyNewDictory
   git clone https://github.com/chiragadm/PyXtremIO
