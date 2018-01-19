@@ -25,7 +25,7 @@ PyXtremIO supports XMS 4.x and 6.0.X
   ```
 
   # Setting Up YAML File For Tracking Logging:
-  Once this library is installed, you will have an option to create yaml file that contains configuration settings to enable rotational logs. Upon appropriate setting in the yaml file, log files will retain any informational or error logs.
+  Once this library is installed, you will have an option to create PyXtremIO.yaml file that contains configuration settings to enable rotational logs. Upon appropriate setting in the yaml file, log files will retain any informational or error logs.
   Please find following example of yaml file.
   ```
   cat PyXtremIO.yaml
@@ -70,13 +70,13 @@ PyXtremIO supports XMS 4.x and 6.0.X
   
   root:
       level: INFO
-      handlers: [console, info_file_handler, error_file_handler]
-    
+      handlers: [console, info_file_handler, error_file_handler]  
   ```
   
-  For example, I have two fabrics in my environment. Each fabric has one core switch. 
-  * Fabric A core switch name is coreA.
-  * Fabric B core switch name is coreB.
+  You may put this yaml file in direcotry of your choice. By default, this library looks for environment variable called PYXTREMIO_LOG_CFG. 
+  This environment variable should contains full path of your PyXtremIO.yaml file. If this environment variable is not set, library will check
+  PyXtremIO.yaml file in our working directory. At last if this file do not exists there, library will use default logging method. This default 
+  method will not log your events.  
   
   With above example, my settings file (fabview.cfg) will look like below.
   Setting file is located in etc directory under your install directory.
