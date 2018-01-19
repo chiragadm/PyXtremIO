@@ -26,7 +26,53 @@ PyXtremIO supports XMS 4.x and 6.0.X
 
   # Setting Up YAML File For Tracking Logging:
   Once this library is installed, you will have an option to create yaml file that contains configuration settings to enable rotational logs. Upon appropriate setting in the yaml file, log files will retain any informational or error logs.
-  You will need to put the core switches information as per following. (Core switches are the switches that are connected to all other switches in your fabric)
+  Please find following example of yaml file.
+  ```
+  cat PyXtremIO.yaml
+  ---
+  version: 1
+  disable_existing_loggers: False
+  formatters:
+      simple:
+          format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  
+  handlers:
+      console:
+          class: logging.StreamHandler
+          level: DEBUG
+          formatter: simple
+          stream: ext://sys.stdout
+  
+      info_file_handler:
+          class: logging.handlers.RotatingFileHandler
+          level: INFO
+          formatter: simple
+          filename: /tmp/PyXtremIO_info.log
+          maxBytes: 10485760 # 10MB
+          backupCount: 20
+          encoding: utf8
+  
+      error_file_handler:
+          class: logging.handlers.RotatingFileHandler
+          level: ERROR
+          formatter: simple
+          filename: /tmp/PyXtremIO_errors.log
+          maxBytes: 10485760 # 10MB
+          backupCount: 20
+          encoding: utf8
+  
+  loggers:
+      PyXtremIO:
+          level: DEBUG
+          handlers: [console, info_file_handler, error_file_handler]
+          #handlers: [console]
+          propagate: no
+  
+  root:
+      level: INFO
+      handlers: [console, info_file_handler, error_file_handler]
+    
+  ```
   
   For example, I have two fabrics in my environment. Each fabric has one core switch. 
   * Fabric A core switch name is coreA.
